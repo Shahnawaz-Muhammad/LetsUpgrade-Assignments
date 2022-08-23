@@ -1,7 +1,8 @@
 import React from 'react'
+import ProductsList from './ProductsList'
 
 const Products = () => {
-    const productData = [
+    const productDetails = [
         {
             productTitle: 'ALIENWARE RGB MECHANICAL GAMING KEYBOARD - AW410K',
             productImg: 'https://i.dell.com/is/image/DellContent//content/dam/images/products/electronics-and-accessories/dell/keyboards/aw410k/aw410k-ckb-rf-gy.psd?fmt=pjpg&pscan=auto&scl=1&wid=3422&hei=2468&qlt=100,0&resMode=sharp2&size=3422,2468'
@@ -49,19 +50,7 @@ const Products = () => {
         <div>
             <div style={{border: '1px solid black', padding: '20px' , marginTop: '20px'}}>
             <h1>Products</h1>
-                {productData.map((product)  => {
-                    return(
-                        <div style={{display:'flex', flexDirection:'row', justifyContent:'space-between', alignItems:'center',padding: '3px 20px',boxShadow: '2px 5px 10px black'}}>
-                    <p>{product.productTitle}</p>
-                    <img style={{width: '100px', height: '90px', margin: '10px', backgroundColor:'transparent'}} src={product.productImg} alt="" />
-                </div>
-                    )
-                })}
-                {/* <div style={{display:'flex', flexDirection:'row', justifyContent:'space-around',padding: '3px',boxShadow: '5px 5px 10px black'}}>
-                    <h2>Shirts</h2>
-                    <img style={{width: '100px', height: '90px', margin: '10px' ,marginBottom: '5px', backgroundColor:'transparent'}} src='http://i.dell.com/is/image/DellContent//content/dam/global-site-design/product_images/peripherals/input_devices/dell/keyboards/alienware-aw768/pdp/alienware-pro-gaming-keyboard-pdp-module-02-v2.jpg?fmt=png-alpha' alt="" />
-                </div> */}
-                
+                <ProductsList productDetails={productDetails}/>
             </div>
         </div>
     </div>
